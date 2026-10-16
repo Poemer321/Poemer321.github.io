@@ -1,0 +1,18 @@
+{
+  "slug": "hellogithub-open-source-discovery",
+  "title": "HelloGitHub：发现 GitHub 有趣开源项目的好去处",
+  "date": "2026-10-16",
+  "category": "学习笔记",
+  "tags": [
+    "GitHub",
+    "开源项目",
+    "工具推荐",
+    "学习资源"
+  ],
+  "excerpt": "分享一个发现有趣开源项目的网站 HelloGitHub：从实用工具、入门项目到学习资源，给探索 GitHub 多一个入口，也给自己找一点动手实践的灵感。",
+  "cover": "/uploads/hellogithub-cover.svg",
+  "draft": true,
+  "pinned": false,
+  "comments": true,
+  "body": "今天分享一个发现 GitHub 有趣项目的网站：[HelloGitHub](https://hellogithub.com/)。\n\nGitHub 上的项目很多，但刚开始学习时，不一定知道从哪里逛起。HelloGitHub 提供了一个入口：先通过项目介绍了解它能做什么，再进入原仓库继续探索。\n\n## HelloGitHub 是什么？\n\nHelloGitHub 是一个分享有趣、适合入门的开源项目的社区。除了工具和实战项目，也能找到开源书籍等学习资源。网站提供月刊等内容，适合在没有明确目标时翻一翻，发现新的方向。\n\n## 可以带着哪些问题去逛？\n\n- **想找实用工具**：看看有没有能解决手头小问题的项目。\n- **想练习编程**：找一个规模适中、说明清楚的项目，尝试在本地运行。\n- **想拓展思路**：了解别人如何把一个想法做成可以使用的东西。\n\n## 怎样把“收藏”变成“学到”？\n\n找到感兴趣的项目后，可以给自己安排一个小任务：\n\n1. 阅读项目的 README，弄清楚用途、运行条件和使用方式。\n2. 按文档跑通一个最简单的示例。\n3. 改动一个小功能，观察结果。\n4. 把遇到的问题和解决方法记下来。\n\n不必一次研究很多项目。选一个真正感兴趣的，动手试一试，比单纯增加收藏更有收获。\n\n> 发现项目只是开始，把它跑起来，才是学习的下一步。\n\n## 相关链接\n\n- [HelloGitHub 官网](https://hellogithub.com/)\n- [HelloGitHub 的 GitHub 仓库](https://github.com/521xueweihan/HelloGitHub)\n\n先把这个入口记在这里，以后遇到值得深入学习的项目，再单独写一篇记录。"
+}
