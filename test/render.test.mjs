@@ -1,0 +1,6 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {markdown,validatePost,safeURL} from '../lib/render.mjs';
+test('Markdown renders structure and removes executable content',()=>{const html=markdown('## 目录\n\n<script>alert(1)</script>\n\n[bad](javascript:alert(1))\n\n![img](https://example.com/a.png)\n\n```js\nconst a = 1;\n```\n\n| a | b |\n| - | - |\n| 1 | 2 |');assert.match(html,/<h2 id="section-1">目录<\/h2>/);assert.match(html,/<table>/);assert.match(html,/language-js/);assert.match(html,/loading="lazy"/);assert.doesNotMatch(html,/<script|javascript:/)});
+test('Post path must be a safe stable slug',()=>{const p={slug:'hello',title:'Hello',date:'2026-10-16',tags:[],body:'Text'};assert.equal(validatePost(p,'hello'),p);assert.throws(()=>validatePost({...p,slug:'../escape'},'../escape'));assert.throws(()=>validatePost(p,'other'));assert.throws(()=>validatePost({...p,date:'not-a-date'},'hello'))});
+test('URL accepts web and local assets but rejects active URLs',()=>{assert.equal(safeURL('javascript:alert(1)'), '');assert.equal(safeURL('//evil.test/a'), '');assert.equal(safeURL('/uploads/a.webp'),'/uploads/a.webp');assert.equal(safeURL('https://example.com/a.png'),'https://example.com/a.png')});
