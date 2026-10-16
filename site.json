@@ -7,8 +7,15 @@
   "repo": "Poemer321.github.io",
   "branch": "main",
   "heroTitle": "把日常写成日记，\n把学习慢慢积累。",
-  "categories": ["学习笔记", "生活日常", "随想"],
+  "categories": [
+    "学习笔记",
+    "生活日常",
+    "随想"
+  ],
   "background": "",
-  "giscus": {"repoId": "", "categoryId": ""},
+  "giscus": {
+    "repoId": "R_kgDOVMb8fA",
+    "categoryId": "DIC_kwDOVMb8fM4DIpKc"
+  },
   "files": []
 }
