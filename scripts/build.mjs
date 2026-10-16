@@ -48,7 +48,7 @@ await write('search.json',JSON.stringify(posts.map(({body,...p})=>({...p,body}))
 await write('site-public.json',JSON.stringify({title:site.title,description:site.description,owner:site.owner,repo:site.repo,branch:site.branch}));
 const locations=['/','/archives/','/about/','/files/',...posts.map(p=>`/posts/${p.slug}/`),...categories.map(c=>`/categories/${encodeURIComponent(c)}/`),...tags.map(t=>`/tags/${encodeURIComponent(t)}/`)];
 await write('sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${locations.map(p=>`<url><loc>${esc(site.url+p)}</loc></url>`).join('')}</urlset>`);
-await write('robots.txt',`User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /search/\nSitemap: ${site.url}/sitemap.xml\n`);
+await write('robots.txt',`User-agent: *\nAllow: /\nDisallow: /mengdao-admin/\nDisallow: /search/\nSitemap: ${site.url}/sitemap.xml\n`);
 await write('atom.xml',`<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>${esc(site.title)}</title><id>${site.url}/</id><link href="${site.url}/atom.xml" rel="self"/><link href="${site.url}/"/><updated>${new Date(posts[0]?.date||'2026-10-16').toISOString()}</updated>${posts.map(p=>`<entry><id>${site.url}/posts/${p.slug}/</id><title>${esc(p.title)}</title><link href="${site.url}/posts/${p.slug}/"/><updated>${new Date(p.date).toISOString()}</updated><author><name>${esc(site.author)}</name></author><summary>${esc(p.excerpt)}</summary></entry>`).join('')}</feed>`);
 await write('.nojekyll','');
 console.log(`Built ${posts.length} published posts; ${all.length-posts.length} drafts excluded. Output: ${out}`);

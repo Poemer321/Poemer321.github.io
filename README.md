@@ -3,13 +3,13 @@
 记录一些平时学习生活的日常。
 
 - 博客：https://poemer321.github.io/
-- 后台：https://poemer321.github.io/admin/
+- 后台：https://poemer321.github.io/mengdao-admin/
 
 原创的纸页风格，参考 Hallmark 的文字层级、克制排版与移动端设计原则。使用 Node.js 将 Markdown 内容生成为静态网站，由 GitHub Actions 自动发布到 GitHub Pages。
 
 ## 写日记
 
-1. 打开 `/admin/`，进入 **GitHub 连接**。
+1. 打开 `/mengdao-admin/`，进入 **GitHub 连接**。
 2. 在 GitHub 的 Settings → Developer settings → Personal access tokens → Fine-grained tokens 创建令牌。只选择本博客仓库，授予 **Contents: Read and write**，Metadata 保持默认。不要勾选所有仓库，不需要 Workflows 权限。
 3. 在后台输入令牌并连接。令牌只存于当前标签页的 sessionStorage，关闭标签页后清除；不写入仓库，不发送给其他服务。
 4. 点 **写新日记**，填写标题、日期、分类和正文。可保存草稿，或取消草稿并发布。
@@ -49,7 +49,7 @@ npm run preview
 ```text
 site.json               站点文案、分类、评论和资料清单
 content/*.json          日记元信息与 Markdown 正文
-public/admin/           直接通过 GitHub API 管理内容的后台
+public/mengdao-admin/           直接通过 GitHub API 管理内容的后台
 public/assets/          样式与前台脚本
 public/uploads/         后台上传的图片和资料
 lib/render.mjs          Markdown 清洗、文章校验
